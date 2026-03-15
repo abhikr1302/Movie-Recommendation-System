@@ -38,8 +38,6 @@ Easy to extend with additional datasets
 
 The recommendation system follows this pipeline:
 
-## ML Pipeline
-
 ```
 Movie Dataset
       ↓
@@ -136,7 +134,7 @@ Recommended Movies:
 4. Interstellar
 5. Gravity
    
-# 📁 Project Structure
+# 🖥️ Project Structure
 
 ```
 movie-recommendation-system/
