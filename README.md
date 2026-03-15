@@ -137,6 +137,7 @@ Recommended Movies:
 5. Gravity
    
 # 🖥️ Project Structure
+```
 Movie-Recommendation-System
 │
 ├── data
@@ -154,6 +155,7 @@ Movie-Recommendation-System
 ├── requirements.txt
 │
 └── README.md
+```
 
 # 🛠️ Technologies Used
 
