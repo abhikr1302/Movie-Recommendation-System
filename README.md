@@ -1,88 +1,220 @@
-# TMDB Movie-Recommendation-System
+🎬 Movie Recommendation System
 
-## Background
-What can we say about the success of a movie before it is released? Are there certain companies (Pixar?) that have found a consistent formula? Given that major films costing over $100 million to produce can still flop, this question is more important than ever to the industry. Film aficionados might have different interests. Can we predict which films will be highly rated, whether or not they are a commercial success?
+A content-based movie recommendation system built using Python, NLP techniques, and machine learning. The system suggests movies similar to a selected movie by analyzing textual features such as genres, keywords, cast, and overview.
 
-This is a great place to start digging in to those questions, with data on the plot, cast, crew, budget, and revenues of several thousand films.
+The project demonstrates how Natural Language Processing and similarity algorithms can power recommendation engines used in platforms like streaming services and e-commerce websites.
 
-## Data Source Transfer Summary
-We have removed the original version of this dataset per a DMCA takedown request from IMDB. In order to minimize the impact, we're replacing it with a similar set of films and data fields from The Movie Database (TMDb) in accordance with their terms of use. The bad news is that kernels built on the old dataset will most likely no longer work.
+📌 Project Overview
 
-The good news is that:
+Recommendation systems help users discover relevant content by analyzing patterns and similarities in data.
 
-You can port your existing kernels over with a bit of editing. This kernel offers functions and examples for doing so. You can also find a general introduction to the new format here.
+This project implements a content-based filtering approach where movies are recommended based on their similarity to a selected movie.
 
-The new dataset contains full credits for both the cast and the crew, rather than just the first three actors.
+The system:
 
-Actor and actresses are now listed in the order they appear in the credits. It's unclear what ordering the original dataset used; for the movies I spot checked it didn't line up with either the credits order or IMDB's stars order.
+Processes movie metadata
 
-The revenues appear to be more current. For example, IMDB's figures for Avatar seem to be from 2010 and understate the film's global revenues by over $2 billion.
+Converts textual data into numerical vectors
 
-Some of the movies that we weren't able to port over (a couple of hundred) were just bad entries. For example, this IMDB entry has basically no accurate information at all. It lists Star Wars Episode VII as a documentary.
+Calculates similarity between movies
 
-## Data Source Transfer Details
-Several of the new columns contain json. You can save a bit of time by porting the load data functions [from this kernel]().
+Recommends the Top-N most similar movies
 
-Even in simple fields like runtime may not be consistent across versions. For example, previous dataset shows the duration for Avatar's extended cut while TMDB shows the time for the original version.
+🚀 Features
 
-There's now a separate file containing the full credits for both the cast and crew.
+Content-based recommendation engine
 
-All fields are filled out by users so don't expect them to agree on keywords, genres, ratings, or the like.
+NLP-based feature extraction
 
-Your existing kernels will continue to render normally until they are re-run.
+Cosine similarity for similarity scoring
 
-If you are curious about how this dataset was prepared, the code to access TMDb's API is posted here.
+Interactive interface using Streamlit
 
-## New columns:
+Fast recommendations based on vector similarity
 
-homepage
+Easy to extend with additional datasets
 
-id
+🧠 Machine Learning Approach
 
-original_title
+The recommendation system follows this pipeline:
 
-overview
+Movie Dataset
+      ↓
+Data Preprocessing
+      ↓
+Feature Engineering (NLP)
+      ↓
+Text Vectorization
+      ↓
+Cosine Similarity Calculation
+      ↓
+Recommendation Engine
+📂 Dataset
 
-popularity
+The dataset contains movie metadata such as:
 
-production_companies
+Feature	Description
+title	Movie title
+genres	Movie genres
+keywords	Important movie keywords
+cast	Main actors
+crew	Director and crew
+overview	Movie description
 
-production_countries
+These features are combined into a single textual representation for similarity comparison.
 
-release_date
+⚙️ Data Preprocessing
 
-spoken_languages
+The preprocessing steps include:
 
-status
+Handling missing values
 
-tagline
+Merging multiple text columns
 
-vote_average
+Text normalization
 
-Lost columns:
+Tokenization
 
-actor_1_facebook_likes
+Removing unnecessary characters
 
-actor_2_facebook_likes
+Example transformation:
 
-actor_3_facebook_likes
+Genres + Keywords + Cast + Overview
+                ↓
+        Combined Text Feature
+🔍 Feature Engineering
 
-aspect_ratio
+The project uses CountVectorizer from Scikit-Learn to convert text data into numerical vectors.
 
-cast_total_facebook_likes
+This technique represents each movie as a bag-of-words vector based on word frequency.
 
-color
+Example:
 
-content_rating
+Movie A → [0, 1, 3, 0, 2]
+Movie B → [1, 0, 2, 1, 0]
+📊 Similarity Calculation
 
-director_facebook_likes
+To determine movie similarity, the system uses Cosine Similarity.
 
-facenumber_in_poster
+Cosine similarity measures the similarity between two vectors based on the angle between them.
 
-movie_facebook_likes
+Formula:
 
-movie_imdb_link
+Similarity = (A · B) / (||A|| ||B||)
 
-num_critic_for_reviews
+Higher similarity scores indicate more similar movies.
 
-num_user_for_reviews
+🎯 Recommendation Logic
+
+When a user selects a movie:
+
+The system retrieves the movie index.
+
+Cosine similarity scores are calculated with all other movies.
+
+Movies are sorted based on similarity.
+
+The Top 5 most similar movies are recommended.
+
+Example:
+
+Input Movie: Avatar
+
+Recommended Movies:
+1. Avatar: The Way of Water
+2. Guardians of the Galaxy
+3. Star Trek
+4. Interstellar
+5. Gravity
+🖥️ Project Structure
+Movie-Recommendation-System
+│
+├── data
+│   └── movies.csv
+│
+├── notebooks
+│   └── movie_recommendation.ipynb
+│
+├── app
+│   └── streamlit_app.py
+│
+├── models
+│   └── similarity.pkl
+│
+├── requirements.txt
+│
+└── README.md
+🛠️ Technologies Used
+
+Python
+
+Pandas
+
+NumPy
+
+Scikit-learn
+
+NLP (CountVectorizer)
+
+Streamlit
+
+Cosine Similarity
+
+📦 Installation
+
+Clone the repository:
+
+git clone https://github.com/yourusername/movie-recommendation-system.git
+
+Navigate to the project folder:
+
+cd movie-recommendation-system
+
+Install dependencies:
+
+pip install -r requirements.txt
+▶️ Running the Application
+
+To start the Streamlit app:
+
+streamlit run app.py
+
+The application will open in your browser where you can select a movie and get recommendations.
+
+📈 Future Improvements
+
+Possible enhancements for this project:
+
+Implement collaborative filtering
+
+Use word embeddings (Word2Vec / BERT)
+
+Add user-based personalization
+
+Deploy using Docker and cloud platforms
+
+Integrate movie posters and API data
+
+🎯 Learning Outcomes
+
+Through this project, I gained experience in:
+
+Natural Language Processing (NLP)
+
+Feature engineering for text data
+
+Similarity-based recommendation systems
+
+Building ML applications with Python
+
+Developing interactive data applications using Streamlit
+
+👨‍💻 Author
+
+Abhishek Kumar
+
+Email: kabhikr74@gmail.com
+
+GitHub: https://github.com/abhikr1302
+
+LinkedIn: https://linkedin.com/in/abhishek-kumar1302
