@@ -137,22 +137,27 @@ Recommended Movies:
 # 🖥️ Project Structure
 
 ```
-movie-recommendation-system/
+Movie-Recommendation-System/
 │
-├── data/
-│   └── movies.csv
+├── dataset/
+│   └── tmdb_5000_movies.csv          # Movie metadata dataset
 │
 ├── notebooks/
-│   └── movie_recommendation.ipynb
+│   └── movie_recommender.ipynb       # Model development and experimentation
 │
-├── app.py
+├── artifacts/
+│   ├── movie_dict.pkl                    # Processed movie dataset
+│   └── similarity.pkl                # Cosine similarity matrix
 │
-├── models/
-│   ├── movie_list.pkl
-│   └── similarity.pkl
+├── app.py                            # Streamlit web application
 │
-├── requirements.txt
-└── README.md
+├── model_building.py                 # Script to preprocess data and train model
+│
+├── requirements.txt                  # Python dependencies
+│
+├── README.md                         # Project documentation
+│
+└── .gitignore                        # Files ignored in Git
 ```
 
 # 🛠️ Technologies Used
