@@ -140,24 +140,28 @@ Recommended Movies:
 Movie-Recommendation-System/
 │
 ├── dataset/
-│   └── tmdb_5000_movies.csv          # Movie metadata dataset
+│   └── tmdb_5000_movies.csv        # Movie metadata dataset
 │
 ├── notebooks/
-│   └── movie_recommender.ipynb       # Model development and experimentation
+│   └── movie_recommender.ipynb     # Model development and experimentation
 │
-├── artifacts/
-│   ├── movie_dict.pkl                    # Processed movie dataset
-│   └── similarity.pkl                # Cosine similarity matrix
+├── movies.pkl                  # Processed movie dataset
+|
+|── similarity.pkl              # Cosine similarity matrix
 │
-├── app.py                            # Streamlit web application
+├── app.py                          # Streamlit application
 │
-├── model_building.py                 # Script to preprocess data and train model
+├── model_building.py               # Script to preprocess data and generate similarity matrix
 │
-├── requirements.txt                  # Python dependencies
+├── Procfile                        # Deployment configuration for the application
 │
-├── README.md                         # Project documentation
+├── setup.sh                        # Script to configure Streamlit settings for deployment
 │
-└── .gitignore                        # Files ignored in Git
+├── requirements.txt                # Python dependencies
+│
+├── README.md                       # Project documentation
+│
+└── .gitignore                      # Ignored files
 ```
 
 # 🛠️ Technologies Used
