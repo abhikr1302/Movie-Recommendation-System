@@ -4,7 +4,7 @@ A content-based movie recommendation system built using Python, NLP techniques, 
 
 The project demonstrates how Natural Language Processing and similarity algorithms can power recommendation engines used in platforms like streaming services and e-commerce websites.
 
-#📌 Project Overview
+# 📌 Project Overview
 
 Recommendation systems help users discover relevant content by analyzing patterns and similarities in data.
 
@@ -20,7 +20,7 @@ Calculates similarity between movies
 
 Recommends the Top-N most similar movies
 
-#🚀 Features
+# 🚀 Features
 
 Content-based recommendation engine
 
@@ -34,7 +34,7 @@ Fast recommendations based on vector similarity
 
 Easy to extend with additional datasets
 
-#🧠 Machine Learning Approach
+# 🧠 Machine Learning Approach
 
 The recommendation system follows this pipeline:
 
@@ -50,7 +50,7 @@ Cosine Similarity Calculation
       ↓
 Recommendation Engine
 
-#📂 Dataset
+# 📂 Dataset
 
 The dataset contains movie metadata such as:
 
@@ -64,7 +64,7 @@ overview	Movie description
 
 These features are combined into a single textual representation for similarity comparison.
 
-#⚙️ Data Preprocessing
+# ⚙️ Data Preprocessing
 
 The preprocessing steps include:
 
@@ -84,7 +84,7 @@ Genres + Keywords + Cast + Overview
                 ↓
         Combined Text Feature
         
-#🔍 Feature Engineering
+# 🔍 Feature Engineering
 
 The project uses CountVectorizer from Scikit-Learn to convert text data into numerical vectors.
 
@@ -95,7 +95,7 @@ Example:
 Movie A → [0, 1, 3, 0, 2]
 Movie B → [1, 0, 2, 1, 0]
 
-#📊 Similarity Calculation
+# 📊 Similarity Calculation
 
 To determine movie similarity, the system uses Cosine Similarity.
 
@@ -107,7 +107,7 @@ Similarity = (A · B) / (||A|| ||B||)
 
 Higher similarity scores indicate more similar movies.
 
-#🎯 Recommendation Logic
+# 🎯 Recommendation Logic
 
 When a user selects a movie:
 
@@ -130,7 +130,7 @@ Recommended Movies:
 4. Interstellar
 5. Gravity
    
-#🖥️ Project Structure
+# 🖥️ Project Structure
 Movie-Recommendation-System
 │
 ├── data
@@ -149,7 +149,7 @@ Movie-Recommendation-System
 │
 └── README.md
 
-#🛠️ Technologies Used
+# 🛠️ Technologies Used
 
 Python
 
@@ -165,7 +165,7 @@ Streamlit
 
 Cosine Similarity
 
-#📦 Installation
+# 📦 Installation
 
 Clone the repository:
 
@@ -179,7 +179,7 @@ Install dependencies:
 
 pip install -r requirements.txt
 
-#▶️ Running the Application
+# ▶️ Running the Application
 
 To start the Streamlit app:
 
@@ -187,7 +187,7 @@ streamlit run app.py
 
 The application will open in your browser where you can select a movie and get recommendations.
 
-#📈 Future Improvements
+# 📈 Future Improvements
 
 Possible enhancements for this project:
 
@@ -201,7 +201,7 @@ Deploy using Docker and cloud platforms
 
 Integrate movie posters and API data
 
-#🎯 Learning Outcomes
+# 🎯 Learning Outcomes
 
 Through this project, I gained experience in:
 
@@ -215,7 +215,7 @@ Building ML applications with Python
 
 Developing interactive data applications using Streamlit
 
-#👨‍💻 Author
+# 👨‍💻 Author
 
 Abhishek Kumar
 
