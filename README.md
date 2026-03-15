@@ -84,9 +84,11 @@ Removing unnecessary characters
 
 Example transformation:
 
+```
 Genres + Keywords + Cast + Overview
                 ↓
         Combined Text Feature
+```
         
 # 🔍 Feature Engineering
 
