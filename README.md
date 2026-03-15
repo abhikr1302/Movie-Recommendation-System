@@ -38,21 +38,16 @@ Easy to extend with additional datasets
 
 The recommendation system follows this pipeline:
 
-Movie Dataset 
+Movie Dataset
       ↓
-      
 Data Preprocessing
       ↓
-      
 Feature Engineering (NLP)
       ↓
-      
 Text Vectorization
       ↓
-      
 Cosine Similarity Calculation
       ↓
-      
 Recommendation Engine
 
 # 📂 Dataset
