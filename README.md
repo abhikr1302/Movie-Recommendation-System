@@ -136,25 +136,32 @@ Recommended Movies:
 4. Interstellar
 5. Gravity
    
-# 🖥️ Project Structure
+# 📁 Project Structure
+
 ```
-Movie-Recommendation-System
+movie-recommendation-system/
 │
-├── data
+├── data/                        # Dataset files
 │   └── movies.csv
 │
-├── notebooks
+├── notebooks/                   # Jupyter notebooks for experimentation
 │   └── movie_recommendation.ipynb
 │
-├── app
-│   └── streamlit_app.py
+├── src/                         # Core source code
+│   ├── preprocessing.py         # Data cleaning and preprocessing
+│   ├── feature_engineering.py   # NLP feature creation
+│   ├── vectorization.py         # Text vectorization using CountVectorizer
+│   └── recommender.py           # Recommendation logic
 │
-├── models
+├── models/                      # Saved ML models
 │   └── similarity.pkl
 │
-├── requirements.txt
+├── app/                         # Streamlit application
+│   └── app.py
 │
-└── README.md
+├── requirements.txt             # Project dependencies
+├── README.md                    # Project documentation
+└── .gitignore                   # Ignored files
 ```
 
 # 🛠️ Technologies Used
