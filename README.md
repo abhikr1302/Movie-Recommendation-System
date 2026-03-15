@@ -139,27 +139,20 @@ Recommended Movies:
 ```
 movie-recommendation-system/
 │
-├── data/                        # Dataset files
+├── data/
 │   └── movies.csv
 │
-├── notebooks/                   # Jupyter notebooks for experimentation
+├── notebooks/
 │   └── movie_recommendation.ipynb
 │
-├── src/                         # Core source code
-│   ├── preprocessing.py         # Data cleaning and preprocessing
-│   ├── feature_engineering.py   # NLP feature creation
-│   ├── vectorization.py         # Text vectorization using CountVectorizer
-│   └── recommender.py           # Recommendation logic
+├── app.py
 │
-├── models/                      # Saved ML models
+├── models/
+│   ├── movie_list.pkl
 │   └── similarity.pkl
 │
-├── app/                         # Streamlit application
-│   └── app.py
-│
-├── requirements.txt             # Project dependencies
-├── README.md                    # Project documentation
-└── .gitignore                   # Ignored files
+├── requirements.txt
+└── README.md
 ```
 
 # 🛠️ Technologies Used
